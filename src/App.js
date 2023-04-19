@@ -3,15 +3,15 @@ import styles from "./style";
 import { Hero, Navbar } from "./components";
 
 const App = () => (
-  <div className="bg-primary w-full">
+  <div className="bg-primary m-0 h-full">
     <div className={`${styles.paddingX}`}>
       <div>
         <Navbar />
       </div>
     </div>
 
-    <div className={`bg-primary ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
+    <div className={`${styles.flexStart}`}>
+      <div className={`${styles.padding} ${styles.boxWidth}`}>
         <Hero />
       </div>
     </div>

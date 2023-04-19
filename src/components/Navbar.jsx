@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../style";
 import { SocialIcon } from "react-social-icons";
 
 const Navbar = () => {
@@ -16,7 +17,7 @@ const Navbar = () => {
           alt="Factor Labs"
         />
       </a>
-      <h1 className="text-white flex items-center">TEMPLATES</h1>
+      <h1 className={`${styles.heading2} ${styles.flexCenter}`}>TEMPLATES</h1>
       <div className="flex justify-center items-center">
         <SocialIcon
           network="twitter"
