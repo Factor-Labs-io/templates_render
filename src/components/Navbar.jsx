@@ -1,8 +1,13 @@
 import React from "react";
+import { SocialIcon } from "react-social-icons";
 
 const Navbar = () => {
+  const handleTwitterClick = () => {
+    window.open("https://twitter.com/Factor_Labs");
+  };
+
   return (
-    <nav className="w-full border-2 border-white flex flex-row justify-between">
+    <nav className="w-full flex flex-row justify-between">
       <a href="/">
         <img
           src="https://i.ibb.co/2cCbLyQ/island-labs-FAW-03-1.jpg"
@@ -11,8 +16,14 @@ const Navbar = () => {
           alt="Factor Labs"
         />
       </a>
-      <h1 className="text-white inline-block align-middle">Templates</h1>
-      <h1 className="text-white">Twitter Link</h1>
+      <h1 className="text-white flex items-center">TEMPLATES</h1>
+      <div className="flex justify-center items-center">
+        <SocialIcon
+          network="twitter"
+          fgColor="#fff"
+          onClick={handleTwitterClick}
+        />
+      </div>
     </nav>
   );
 };
