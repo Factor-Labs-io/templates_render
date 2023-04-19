@@ -12,17 +12,17 @@ const Navbar = () => {
       <a href="/">
         <img
           src="https://i.ibb.co/2cCbLyQ/island-labs-FAW-03-1.jpg"
-          width="140"
-          height="140"
           alt="Factor Labs"
+          className="w-[100px] h-[100px]"
         />
       </a>
       <h1 className={`${styles.heading2} ${styles.flexCenter}`}>TEMPLATES</h1>
-      <div className="flex justify-center items-center">
+      <div className={`${styles.flexCenter}`}>
         <SocialIcon
           network="twitter"
           fgColor="#fff"
           onClick={handleTwitterClick}
+          className="cursor-pointer"
         />
       </div>
     </nav>
