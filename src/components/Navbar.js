@@ -13,7 +13,7 @@ const Navbar = () => {
         <img
           src="https://i.ibb.co/2cCbLyQ/island-labs-FAW-03-1.jpg"
           alt="Factor Labs"
-          className="w-[100px] h-[100px]"
+          className="w-[120px] h-[120px] object-contain"
         />
       </a>
       <h1 className={`${styles.heading2} ${styles.flexCenter}`}>TEMPLATES</h1>

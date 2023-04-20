@@ -1,4 +1,5 @@
-import Hero from "./Hero";
+import Circles from "./Circles";
 import Navbar from "./Navbar";
+import Generation from "./Generation";
 
-export { Hero, Navbar };
+export { Circles, Navbar, Generation };
