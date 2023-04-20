@@ -1,15 +1,12 @@
-export default function AnimateNouns() {
-  const gifContainer = document.getElementById("gif-container");
-  const searchInput = document.getElementById("search-input");
-  const searchForm = document.getElementById("search-form");
-  const gifLoader = document.getElementById("gif-loader");
+import React, { useState } from "react";
+import styles from "../style";
 
-  gifLoader.style.display = "none";
+function AnimateNouns() {
+  const [gifUrl, setGifUrl] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  searchForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const searchTerm = searchInput.value;
-
+  function searchGif(searchTerm) {
     let url = "";
     if (searchTerm) {
       url = `https://s3.us-east-1.wasabisys.com/nouns/images/static/${searchTerm}.gif`;
@@ -17,28 +14,74 @@ export default function AnimateNouns() {
       url = "https://s3.us-east-1.wasabisys.com/nouns/images/static/74.gif";
     }
 
-    // Show the loader before the form is submitted
-    gifLoader.style.display = "flex";
-    gifContainer.innerHTML = "";
+    setIsLoading(true);
+    setGifUrl("");
+    setErrorMessage("");
 
-    // Wait for 1 seconds before showing the GIF
     setTimeout(() => {
-      const img = document.createElement("img");
+      const img = new Image();
       img.onload = () => {
-        gifContainer.appendChild(img);
-        // Hide the loader again when the GIF is loaded
-        gifLoader.style.display = "none";
+        setGifUrl(url);
+        setIsLoading(false);
       };
       img.onerror = () => {
-        gifContainer.innerHTML =
-          "Sorry, an error occurred while loading the GIF.";
-        // Hide the loader again when an error occurs
-        gifLoader.style.display = "none";
+        setErrorMessage("Sorry, an error occurred while loading the GIF.");
+        setIsLoading(false);
       };
       img.src = url;
       img.alt = searchTerm || "Default GIF";
-
-      searchInput.value = "";
     }, 1000);
-  });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    const searchTerm = event.target.elements.search.value.trim();
+    searchGif(searchTerm);
+  }
+
+  return (
+    <div className="flex flex-col md:flex-row md:justify-between md:h-[30rem] md:w-full">
+      <div className="flex flex-col justify-center items-center">
+        <h1 className="whitespace-nowrap pt-0 text-4xl font-medium text-white">
+          Animate any nouns!
+        </h1>
+        <form
+          className="flex flex-col justify-center items-center pt-10"
+          onSubmit={handleSubmit}
+        >
+          <input
+            className="rounded-2xl placeholder:text-2xl text-3xl bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            type="number"
+            min="0"
+            max="674"
+            autocomplete="off"
+            name="search"
+            placeholder="Number 1"
+          />
+          <div className="pt-10">
+            <button
+              type="submit"
+              className="p-3 rounded-2xl text-3xl shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div className={`md:pt-0 ${styles.flexCenter}`}>
+        {errorMessage && <p>{errorMessage}</p>}
+        <div className={`${styles.flexCenter} md:w-[32rem] md:h-[32rem]`}>
+          {isLoading && (
+            <div className="pt-20">
+              <div className={`loader ${styles.flexCenter}`}></div>
+            </div>
+          )}
+          {gifUrl && <img src={gifUrl} alt="GIF" />}
+        </div>
+      </div>
+    </div>
+  );
 }
+
+export default AnimateNouns;
