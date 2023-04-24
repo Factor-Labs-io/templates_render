@@ -7,7 +7,7 @@ class Template extends Component {
   render() {
     return (
       <div className="bg-primary w-full min-h-screen">
-        <div className={`${styles.paddingX}`}>
+        <div>
           <Dashboard />
         </div>
       </div>
