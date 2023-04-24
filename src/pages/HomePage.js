@@ -1,18 +1,18 @@
 import styles from "../style";
 import React, { Component } from "react";
 
-import { Circles, Navbar } from "../components";
+import { Circles, Navbar, Dashboard } from "../components";
 
 class HomePage extends Component {
   render() {
     return (
-      <div className="bg-primary w-full min-h-screen">
-        <div className={`${styles.paddingX}`}>
-          <Navbar />
+      <div className="bg-primary w-full min-h-screen flex md:flex-row justify-between flex-col">
+        <div>
+          <Dashboard />
         </div>
 
-        <div className={`${styles.flexStart}`}>
-          <div className={`${styles.padding} ${styles.boxWidth}`}>
+        <div className={`md:w-10/12`}>
+          <div className={`${styles.padding}`}>
             <Circles />
           </div>
         </div>

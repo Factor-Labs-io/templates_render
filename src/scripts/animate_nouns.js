@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import styles from "../style";
 
 function AnimateNouns() {
-  const [gifUrl, setGifUrl] = useState("");
+  const [gifUrl, setGifUrl] = useState(
+    "https://s3.us-east-1.wasabisys.com/nouns/images/static/74.gif"
+  );
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
