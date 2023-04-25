@@ -42,7 +42,7 @@ function AnimateNouns() {
   }
 
   return (
-    <div className="flex flex-col md:flex-row md:justify-between md:h-[30rem] md:w-full">
+    <div className="flex flex-col md:flex-row md:justify-evenly md:h-[30rem] md:w-full">
       <div className="flex flex-col justify-center items-center">
         <h1 className="whitespace-nowrap pt-0 text-4xl font-medium text-white">
           Animate any nouns!

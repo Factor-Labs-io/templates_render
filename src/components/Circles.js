@@ -5,7 +5,7 @@ import styles from "../style";
 const Circles = () => {
   return (
     <div
-      className={`grid sm:grid-cols-1 md:grid-cols-5 gap-4 ${styles.flexCenter} ${styles.padding}`}
+      className={`grid sm:grid-cols-1 md:grid-cols-4 gap-4 ${styles.flexCenter} ${styles.padding}`}
     >
       <div>
         <Link to="/fins">
@@ -51,17 +51,6 @@ const Circles = () => {
           />
         </a>
         <p className={`${styles.heading2} ${styles.flexCenter}`}>@iamcyclo</p>
-      </div>
-
-      <div>
-        <Link to="/nouns">
-          <img
-            alt="Nouns"
-            className={`md:w-auto md:h-auto w-48 h-48 rounded-full m-auto ${styles.flexCenter}`}
-            src="https://pbs.twimg.com/profile_images/1603192226921578496/FlKVIPxT_400x400.png"
-          />
-        </Link>
-        <p className={`${styles.heading2} ${styles.flexCenter}`}>Nouns</p>
       </div>
     </div>
   );

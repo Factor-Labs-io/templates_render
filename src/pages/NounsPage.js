@@ -6,7 +6,7 @@ import { Dashboard, Generation } from "../components";
 class NounsPage extends Component {
   render() {
     return (
-      <div className="bg-primary w-full min-h-screen flex md:flex-row md:justify-between">
+      <div className="bg-primary w-full min-h-screen flex flex-col md:flex-row md:justify-between">
         <div>
           <Dashboard />
         </div>
