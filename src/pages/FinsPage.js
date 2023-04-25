@@ -1,18 +1,20 @@
-import styles from "../style";
+// import styles from "../style";
 import React, { Component } from "react";
 
-import { DrinksCircles, Navbar } from "../components";
+import { FinsCircles, Dashboard } from "../components";
 
 class FinsPage extends Component {
   render() {
     return (
-      <div className="bg-primary w-full min-h-screen">
-        <div className={`${styles.paddingX}`}>
-          <Navbar />
+      <div className="bg-primary w-full min-h-screen flex md:flex-row md:justify-between flex-col">
+        <div>
+          <Dashboard />
         </div>
 
-        <div className={`${styles.flexStart}`}>
-          <DrinksCircles />
+        <div className={`md:w-10/12`}>
+          <div>
+            <FinsCircles />
+          </div>
         </div>
       </div>
     );

@@ -3,20 +3,23 @@ import { Link } from "react-router-dom";
 import { Dialog, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
-  CalendarIcon,
-  ChartPieIcon,
-  DocumentDuplicateIcon,
-  FolderIcon,
+  GifIcon,
+  ArrowPathIcon,
   HomeIcon,
-  UsersIcon,
+  WrenchIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 
 const navigation = [
   { name: "Home", to: "/", icon: HomeIcon, current: true },
-  { name: "Remix", to: "/remix", icon: UsersIcon, current: false },
-  { name: "PFPCompare", to: "/pfpcompare", icon: FolderIcon, current: false },
-  { name: "Animate", to: "/nouns", icon: CalendarIcon, current: false },
+  { name: "Remix", to: "/remix", icon: WrenchIcon, current: false },
+  {
+    name: "PFPCompare",
+    to: "/pfpcompare",
+    icon: ArrowPathIcon,
+    current: false,
+  },
+  { name: "Animate", to: "/nouns", icon: GifIcon, current: false },
   // { name: "Documents", href: "#", icon: DocumentDuplicateIcon, current: false },
   // { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
 ];
@@ -103,8 +106,8 @@ export default function Dashboard() {
                           <ul className="-mx-2 space-y-1">
                             {navigation.map((item) => (
                               <li key={item.name}>
-                                <a
-                                  href={item.href}
+                                <Link
+                                  to={item.to}
                                   className={classNames(
                                     item.current
                                       ? "bg-gray-50 text-indigo-600"
@@ -122,7 +125,7 @@ export default function Dashboard() {
                                     aria-hidden="true"
                                   />
                                   {item.name}
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>
