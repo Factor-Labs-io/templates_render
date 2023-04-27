@@ -8,6 +8,7 @@ import {
   Template,
   PFPComparepage,
   JuicyJuPage,
+  SushiPage,
 } from "./pages";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/nouns" element={<NounsPage />} />
         <Route path="/pfpcompare" element={<PFPComparepage />} />
         <Route path="/juicyju" element={<JuicyJuPage />} />
+        <Route path="/sushi" element={<SushiPage />} />
       </Routes>
     </Router>
   );

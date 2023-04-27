@@ -32,13 +32,13 @@ const Circles = () => {
       </div>
 
       <div>
-        <a href="/iamcyclo">
+        <Link to="/sushi">
           <img
-            alt="iamcyclo"
+            alt="NFT_Sushi"
             className={`md:w-auto md:h-auto w-48 h-48 rounded-full m-auto ${styles.flexCenter}`}
             src="https://pbs.twimg.com/profile_images/1603192226921578496/FlKVIPxT_400x400.png"
           />
-        </a>
+        </Link>
         <p className={`${styles.heading2} ${styles.flexCenter}`}>@NFT_Sushi</p>
       </div>
 
