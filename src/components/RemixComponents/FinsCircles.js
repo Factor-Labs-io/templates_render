@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "../../assets/logo.png";
 // import styles from "../style";
 
 const DrinksCircles = () => {
@@ -28,10 +29,10 @@ const DrinksCircles = () => {
           onSubmit={handleSubmit}
         >
           <input
-            className="rounded-2xl text-center placeholder:text-2xl text-3xl bg-gray-200 appearance-none border-2 border-gray-200 rounded w-2/5 md:w-2/12 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            className="rounded-2xl text-center placeholder:text-2xl text-3xl bg-gray-200 appearance-none border-2 border-gray-200 rounded w-2/5 md:w-3/12 py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
             type="number"
-            min="0"
-            max="674"
+            min="1"
+            max="5000"
             autocomplete="off"
             name="number"
             placeholder="Number 1"
@@ -185,14 +186,17 @@ const DrinksCircles = () => {
               type="submit"
               className="p-3 rounded-2xl text-3xl shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
             >
-              Submit
+              Remix
             </button>
           </div>
         </form>
       </div>
-      <div className={`pt-4 text-center flex-col w-2/3 md:w-3/12 items-center`}>
-        <p className={`text-white`}>{number}</p>
-        <p className={`text-white`}>{selectedImg}</p>
+      <div
+        className={`bg-gray-300 md:rounded pt-4 md:mt-48 my-8 rounded-3xl text-center flex-col w-2/3 md:w-3/12 items-center`}
+      >
+        <img src={logo} alt="Logo" className="md:w-[400px] md:h-[400px]" />
+        {/* <p className={`text-white`}>{number}</p>
+        <p className={`text-white`}>{selectedImg}</p> */}
       </div>
     </div>
   );

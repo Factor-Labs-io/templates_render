@@ -1,5 +1,5 @@
 import styles from "../style";
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import logo from "../assets/logo.png";
 

@@ -1,7 +1,7 @@
-import styles from "../style";
+import styles from "../../style";
 import React, { Component } from "react";
 
-import { Circles, Dashboard } from "../components";
+import { Circles, Dashboard } from "../../components";
 
 class HomePage extends Component {
   render() {
