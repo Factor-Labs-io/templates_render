@@ -6,6 +6,7 @@ import PFPComparepage from "./PFP_page";
 import JuicyJuPage from "./RemixPages/JuicyJu_Page";
 import SushiPage from "./RemixPages/SushiPage";
 import HTFTPage from "./AnimatePages/HTFTPage";
+import CycloPage from "./RemixPages/CycloPage";
 
 export {
   HomePage,
@@ -16,4 +17,5 @@ export {
   JuicyJuPage,
   SushiPage,
   HTFTPage,
+  CycloPage,
 };

@@ -6,6 +6,7 @@ import Dashboard from "./Dashboard";
 import JuicyjuCircles from "./RemixComponents/JuicyjuCircles";
 import SushiCircles from "./RemixComponents/SushiCircles";
 import AnimateHTFT from "./AnimateComponents/HTFT";
+import CycloCircles from "./RemixComponents/CycloCircles";
 
 export {
   Circles,
@@ -16,4 +17,5 @@ export {
   JuicyjuCircles,
   SushiCircles,
   AnimateHTFT,
+  CycloCircles,
 };
