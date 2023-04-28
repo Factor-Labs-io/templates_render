@@ -5,6 +5,7 @@ import Template from "./Template";
 import PFPComparepage from "./PFP_page";
 import JuicyJuPage from "./RemixPages/JuicyJu_Page";
 import SushiPage from "./RemixPages/SushiPage";
+import HTFTPage from "./AnimatePages/HTFTPage";
 
 export {
   HomePage,
@@ -14,4 +15,5 @@ export {
   PFPComparepage,
   JuicyJuPage,
   SushiPage,
+  HTFTPage,
 };

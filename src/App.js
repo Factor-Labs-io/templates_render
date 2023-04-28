@@ -9,6 +9,7 @@ import {
   PFPComparepage,
   JuicyJuPage,
   SushiPage,
+  HTFTPage,
 } from "./pages";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/pfpcompare" element={<PFPComparepage />} />
         <Route path="/juicyju" element={<JuicyJuPage />} />
         <Route path="/sushi" element={<SushiPage />} />
+        <Route path="/htft" element={<HTFTPage />} />
       </Routes>
     </Router>
   );

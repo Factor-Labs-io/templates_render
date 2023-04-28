@@ -8,6 +8,7 @@ import {
   HomeIcon,
   WrenchIcon,
   XMarkIcon,
+  DocumentDuplicateIcon,
 } from "@heroicons/react/24/outline";
 
 const navigation = [
@@ -20,7 +21,7 @@ const navigation = [
     current: false,
   },
   { name: "Animate", to: "/nouns", icon: GifIcon, current: false },
-  // { name: "Documents", href: "#", icon: DocumentDuplicateIcon, current: false },
+  { name: "HFTF", to: "/htft", icon: DocumentDuplicateIcon, current: false },
   // { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
 ];
 const teams = [
