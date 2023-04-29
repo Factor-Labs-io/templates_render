@@ -17,7 +17,7 @@ function PFPComparepage() {
 
     try {
       const response = await axios.post(
-        "https://jsonplaceholder.typicode.com/posts",
+        "http://localhost:8080/v1/pfptracking",
         { handle, token_id },
         { headers: { "Content-Type": "application/json" } }
       );
@@ -89,7 +89,7 @@ function PFPComparepage() {
             <div>
               <h1 className={`pt-8 ${styles.heading2}`}>Result:</h1>
               {error && <p>{error}</p>}
-              <p>{JSON.stringify(data, null, 2)}</p>
+              {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
             </div>
           </form>
 
