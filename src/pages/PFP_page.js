@@ -17,7 +17,7 @@ function PFPComparepage() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/v1/pfptracking",
+        "https://testapi.factorlabs.io/v1/pfptracking",
         { handle, token_id },
         { headers: { "Content-Type": "application/json" } }
       );
