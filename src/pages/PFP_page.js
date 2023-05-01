@@ -63,7 +63,7 @@ class PFPComparepage extends Component {
           <div
             className={`${styles.heading2} ${styles.flexCenter} pt-5 flex-col`}
           >
-            <h1>PFP Compare</h1>
+            <h1>Compare PFP with NFT</h1>
             <h2>Project Name: StrangersHQ</h2>
           </div>
 
@@ -72,7 +72,7 @@ class PFPComparepage extends Component {
               className={`ml-10 ${styles.heading2} text-center w-min`}
               onSubmit={this.submitHandler}
             >
-              <h1 className="p-4">Information</h1>
+              <h1 className="p-4">Enter Information</h1>
               <div className={`${styles.flexCenter}`}>
                 <h2 className="whitespace-nowrap p-4">Twitter handle:</h2>
                 <input
@@ -111,7 +111,9 @@ class PFPComparepage extends Component {
               </div>
 
               <div>
-                <h1 className={`pt-8 ${styles.heading2}`}>Result:</h1>
+                <h1 className={`pt-8 ${styles.heading2}`}>
+                  Does PFP match with NFT?
+                </h1>
                 {error && <p>{error}</p>}
                 {responseData && (
                   <pre>{responseData.pfp_status.toString()}</pre>
@@ -123,11 +125,13 @@ class PFPComparepage extends Component {
               <h1 className={`${styles.heading2} bg-primary text-center pb-2`}>
                 NFT Image
               </h1>
-              <img
-                src={nftImageUrl}
-                alt="Logo"
-                className="w-[400px] h-[400px]"
-              />
+              <div className="rounded-lg">
+                <img
+                  src={nftImageUrl}
+                  alt="Logo"
+                  className="w-[400px] h-[400px]"
+                />
+              </div>
             </div>
 
             <div className="bg-gray-300 rounded flex flex-col justify-between">

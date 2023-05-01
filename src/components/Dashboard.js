@@ -254,7 +254,7 @@ export default function Dashboard() {
                   >
                     <img
                       className="h-8 w-8 rounded-full bg-gray-50"
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                      src="https://pbs.twimg.com/profile_images/1639315598424559616/NReikeB-_400x400.jpg"
                       alt=""
                     />
                     <span className="sr-only">Your profile</span>
