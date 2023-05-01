@@ -12,7 +12,7 @@ const Circles = () => {
           <img
             alt="finsbeachbar"
             className={`md:w-auto md:h-auto w-48 h-48 rounded-full m-auto ${styles.flexCenter}`}
-            src="https://pbs.twimg.com/profile_images/1603192226921578496/FlKVIPxT_400x400.png"
+            src="https://pbs.twimg.com/profile_images/1642669619449311233/-5Bqyml4_400x400.jpg"
           />
         </Link>
         <p className={`${styles.heading2} ${styles.flexCenter}`}>
@@ -25,7 +25,7 @@ const Circles = () => {
           <img
             alt="JuicyJu"
             className={`md:w-auto md:h-auto w-48 h-48 rounded-full m-auto ${styles.flexCenter}`}
-            src="https://pbs.twimg.com/profile_images/1603192226921578496/FlKVIPxT_400x400.png"
+            src="https://pbs.twimg.com/profile_images/1641256122727145472/W7jA11Qo_400x400.jpg"
           />
         </Link>
         <p className={`${styles.heading2} ${styles.flexCenter}`}>@juicyju33</p>
@@ -36,7 +36,7 @@ const Circles = () => {
           <img
             alt="NFT_Sushi"
             className={`md:w-auto md:h-auto w-48 h-48 rounded-full m-auto ${styles.flexCenter}`}
-            src="https://pbs.twimg.com/profile_images/1603192226921578496/FlKVIPxT_400x400.png"
+            src="https://pbs.twimg.com/profile_images/1622958591580798977/qd4SIkjw_400x400.jpg"
           />
         </Link>
         <p className={`${styles.heading2} ${styles.flexCenter}`}>@NFT_Sushi</p>
