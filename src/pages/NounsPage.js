@@ -11,7 +11,7 @@ class NounsPage extends Component {
           <Dashboard />
         </div>
 
-        <div className={`border-2 md:w-10/12 ${styles.flexStart}`}>
+        <div className={`md:w-10/12 ${styles.flexStart}`}>
           <div className={`${styles.padding} ${styles.boxWidth}`}>
             <Generation />
           </div>

@@ -11,7 +11,7 @@ const Circles = () => {
         <Link to="/fins">
           <img
             alt="finsbeachbar"
-            className={`md:w-auto md:h-auto w-48 h-48 rounded-full m-auto ${styles.flexCenter}`}
+            className={`md:w-40 md:h-40 w-48 h-48 rounded-full m-auto ${styles.flexCenter}`}
             src="https://pbs.twimg.com/profile_images/1642669619449311233/-5Bqyml4_400x400.jpg"
           />
         </Link>
@@ -24,7 +24,7 @@ const Circles = () => {
         <Link to="/juicyju">
           <img
             alt="JuicyJu"
-            className={`md:w-auto md:h-auto w-48 h-48 rounded-full m-auto ${styles.flexCenter}`}
+            className={`md:w-40 md:h-40 w-48 h-48 rounded-full m-auto ${styles.flexCenter}`}
             src="https://pbs.twimg.com/profile_images/1641256122727145472/W7jA11Qo_400x400.jpg"
           />
         </Link>
@@ -35,7 +35,7 @@ const Circles = () => {
         <Link to="/sushi">
           <img
             alt="NFT_Sushi"
-            className={`md:w-auto md:h-auto w-48 h-48 rounded-full m-auto ${styles.flexCenter}`}
+            className={`md:w-40 md:h-40 w-48 h-48 rounded-full m-auto ${styles.flexCenter}`}
             src="https://pbs.twimg.com/profile_images/1622958591580798977/qd4SIkjw_400x400.jpg"
           />
         </Link>
@@ -46,7 +46,7 @@ const Circles = () => {
         <Link to="/cyclo">
           <img
             alt="iamcyclo"
-            className={`md:w-auto md:h-auto w-48 h-48 rounded-full m-auto ${styles.flexCenter}`}
+            className={`md:w-40 md:h-40 w-48 h-48 rounded-full m-auto ${styles.flexCenter}`}
             src="https://pbs.twimg.com/profile_images/1603192226921578496/FlKVIPxT_400x400.png"
           />
         </Link>

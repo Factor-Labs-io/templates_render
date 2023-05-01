@@ -97,7 +97,7 @@ export default function Dashboard() {
                     <div className="flex h-16 shrink-0 items-center">
                       <img
                         className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                        src="https://pbs.twimg.com/profile_images/1625528874858840064/nX0DmCy9_400x400.jpg"
                         alt="Your Company"
                       />
                     </div>
@@ -135,7 +135,7 @@ export default function Dashboard() {
                           <div className="text-xs font-semibold leading-6 text-gray-400">
                             Your teams
                           </div>
-                          <ul className="-mx-2 mt-2 space-y-1">
+                          {/* <ul className="-mx-2 mt-2 space-y-1">
                             {teams.map((team) => (
                               <li key={team.name}>
                                 <a
@@ -161,7 +161,7 @@ export default function Dashboard() {
                                 </a>
                               </li>
                             ))}
-                          </ul>
+                          </ul> */}
                         </li>
                       </ul>
                     </nav>
@@ -178,8 +178,8 @@ export default function Dashboard() {
           <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
             <div className="flex h-16 shrink-0 items-center">
               <img
-                className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                className="h-10 w-auto rounded"
+                src="https://pbs.twimg.com/profile_images/1625528874858840064/nX0DmCy9_400x400.jpg"
                 alt="Your Company"
               />
             </div>
@@ -217,7 +217,7 @@ export default function Dashboard() {
                   <div className="text-xs font-semibold leading-6 text-gray-400">
                     Your teams
                   </div>
-                  <ul className="-mx-2 mt-2 space-y-1">
+                  {/* <ul className="-mx-2 mt-2 space-y-1">
                     {teams.map((team) => (
                       <li key={team.name}>
                         <a
@@ -243,7 +243,7 @@ export default function Dashboard() {
                         </a>
                       </li>
                     ))}
-                  </ul>
+                  </ul> */}
                 </li>
                 <li className="-mx-6 mt-auto">
                   <a
