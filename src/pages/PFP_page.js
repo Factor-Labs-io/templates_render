@@ -1,7 +1,7 @@
 import styles from "../style";
 import React, { Component } from "react";
 import axios from "axios";
-import logo from "../assets/logo.png";
+// import logo from "../assets/logo.png";
 
 import { Dashboard } from "../components";
 
@@ -14,7 +14,10 @@ class PFPComparepage extends Component {
       token_id: "",
       responseData: null,
       error: null,
-      nftImageUrl: "",
+      nftImageUrl:
+        "https://logowik.com/content/uploads/images/ethereum3649.jpg",
+      twitterImageUrl:
+        "https://about.twitter.com/content/dam/about-twitter/en/brand-toolkit/brand-download-img-1.jpg.twimg.1920.jpg",
     };
   }
 
@@ -30,6 +33,7 @@ class PFPComparepage extends Component {
       console.log("Test API call response:", response.data);
       this.setState({ responseData: response.data, error: null });
       this.setState({ nftImageUrl: response.data.nft_url });
+      this.setState({ twitterImageUrl: response.data.twitter_url });
     } catch (error) {
       console.error("Error during test API call:", error.message);
       this.setState({
@@ -40,7 +44,14 @@ class PFPComparepage extends Component {
   };
 
   render() {
-    const { handle, token_id, responseData, error, nftImageUrl } = this.state;
+    const {
+      handle,
+      token_id,
+      responseData,
+      error,
+      nftImageUrl,
+      twitterImageUrl,
+    } = this.state;
 
     return (
       <div className="bg-primary w-full min-h-screen flex md:flex-row md:justify-between flex-col">
@@ -123,7 +134,11 @@ class PFPComparepage extends Component {
               <h1 className={`${styles.heading2} bg-primary text-center pb-2`}>
                 Twitter Image
               </h1>
-              <img src={logo} alt="Logo" className="w-[400px] h-[400px]" />
+              <img
+                src={twitterImageUrl}
+                alt="Logo"
+                className="w-[400px] h-[400px]"
+              />
             </div>
           </div>
         </div>
