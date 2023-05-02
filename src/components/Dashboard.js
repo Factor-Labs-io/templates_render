@@ -11,19 +11,19 @@ import {
   DocumentDuplicateIcon,
 } from "@heroicons/react/24/outline";
 
-const navigation = [
-  { name: "Home", to: "/", icon: HomeIcon, current: true },
-  { name: "Remix", to: "/remix", icon: WrenchIcon, current: false },
-  {
-    name: "PFPCompare",
-    to: "/pfpcompare",
-    icon: ArrowPathIcon,
-    current: false,
-  },
-  { name: "Animate", to: "/nouns", icon: GifIcon, current: false },
-  { name: "HFTF", to: "/htft", icon: DocumentDuplicateIcon, current: false },
-  // { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
-];
+// const navigation = [
+//   { name: "Home", to: "/", icon: HomeIcon, current: true },
+//   { name: "Remix", to: "/remix", icon: WrenchIcon, current: false },
+//   {
+//     name: "PFPCompare",
+//     to: "/pfpcompare",
+//     icon: ArrowPathIcon,
+//     current: false,
+//   },
+//   { name: "Animate", to: "/nouns", icon: GifIcon, current: false },
+//   { name: "HFTF", to: "/htft", icon: DocumentDuplicateIcon, current: false },
+//   // { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
+// ];
 const teams = [
   { id: 1, name: "Heroicons", href: "#", initial: "H", current: false },
   { id: 2, name: "Tailwind Labs", href: "#", initial: "T", current: false },
@@ -36,6 +36,31 @@ function classNames(...classes) {
 
 export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const [navigation, setNavigation] = useState([
+    { name: "Home", to: "/", icon: HomeIcon, current: true },
+    { name: "Remix", to: "/remix", icon: WrenchIcon, current: false },
+    {
+      name: "PFPCompare",
+      to: "/pfpcompare",
+      icon: ArrowPathIcon,
+      current: false,
+    },
+    { name: "Animate", to: "/nouns", icon: GifIcon, current: false },
+    { name: "HFTF", to: "/htft", icon: DocumentDuplicateIcon, current: false },
+  ]);
+
+  const handleClick = (index) => {
+    const updatedNavigation = navigation.map((item, i) => {
+      if (i === index) {
+        return { ...item, current: true };
+      } else {
+        return { ...item, current: false };
+      }
+    });
+
+    setNavigation(updatedNavigation);
+  };
 
   return (
     <>
@@ -187,10 +212,11 @@ export default function Dashboard() {
               <ul className="flex flex-1 flex-col gap-y-7">
                 <li>
                   <ul className="-mx-2 space-y-1">
-                    {navigation.map((item) => (
-                      <li key={item.name}>
+                    {navigation.map((item, index) => (
+                      <li key={index}>
                         <Link
                           to={item.to}
+                          onClick={() => handleClick(index)}
                           className={classNames(
                             item.current
                               ? "bg-gray-50 text-indigo-600"

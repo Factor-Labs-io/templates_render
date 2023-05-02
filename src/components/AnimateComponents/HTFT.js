@@ -30,7 +30,7 @@ function AnimateHTFT() {
       };
       img.src = url;
       img.alt = concatenatedValues || "Default GIF";
-    }, 1000);
+    }, 1);
   }
 
   const handleSubmit = (event) => {

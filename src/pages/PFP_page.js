@@ -116,32 +116,38 @@ class PFPComparepage extends Component {
                 </h1>
                 {error && <p>{error}</p>}
                 {responseData && (
-                  <pre>{responseData.pfp_status.toString()}</pre>
+                  <pre
+                    className={
+                      responseData.pfp_status.toString() === "true"
+                        ? "text-green-500"
+                        : "text-red-500"
+                    }
+                  >
+                    {responseData.pfp_status.toString()}
+                  </pre>
                 )}
               </div>
             </form>
 
-            <div className="bg-gray-300 rounded flex flex-col justify-between">
+            <div className="flex flex-col justify-between">
               <h1 className={`${styles.heading2} bg-primary text-center pb-2`}>
                 NFT Image
               </h1>
-              <div className="rounded-lg">
-                <img
-                  src={nftImageUrl}
-                  alt="Logo"
-                  className="w-[400px] h-[400px]"
-                />
-              </div>
+              <img
+                src={nftImageUrl}
+                alt="Logo"
+                className="w-[400px] h-[400px] rounded-lg"
+              />
             </div>
 
-            <div className="bg-gray-300 rounded flex flex-col justify-between">
+            <div className=" flex flex-col justify-between">
               <h1 className={`${styles.heading2} bg-primary text-center pb-2`}>
                 Twitter Image
               </h1>
               <img
                 src={twitterImageUrl}
                 alt="Logo"
-                className="w-[400px] h-[400px]"
+                className="w-[400px] h-[400px] rounded-lg"
               />
             </div>
           </div>

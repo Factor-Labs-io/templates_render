@@ -32,7 +32,7 @@ function AnimateNouns() {
       };
       img.src = url;
       img.alt = searchTerm || "Default GIF";
-    }, 1000);
+    }, 500);
   }
 
   function handleSubmit(event) {
